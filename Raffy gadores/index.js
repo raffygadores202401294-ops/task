@@ -21,7 +21,6 @@ document.addEventListener("DOMContentLoaded", function () {
     function renderTasks() {
         taskList.innerHTML = "";
 
-        // Show message if empty
         if (tasks.length === 0) {
             emptyMessage.style.display = "block";
         } else {
@@ -40,7 +39,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Delete task
     taskList.addEventListener("click", function (e) {
         if (e.target.classList.contains("delete-btn")) {
             const index = e.target.getAttribute("data-index");
@@ -49,6 +47,5 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Run once when page loads
     renderTasks();
 });
